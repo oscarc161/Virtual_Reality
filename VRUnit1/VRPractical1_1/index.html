@@ -4,12 +4,53 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <!-- Body -->
+      <a-box wireframe = "true" position="0 0.1 0">
+      <a-box position = "0 1 0" width = "8" depth = "3" height = "1.5" color="orange"></a-box> 
+      <a-box position = "0 1 2" width="3" height = "1.5" color="orange"></a-box>
+      <a-box position = "0 1 -2" width="3" height = "1.5" color="orange"></a-box>
+      <a-box position = "0 2 0 " height="3" src = "wall-murals-closeup-snail-s-shell.jpg.jpg" width="2.8" depth="2.8"></a-box>
+      <!-- Tail -->
+      <a-cylinder position = "-6 1 0" color = "orange" rotation = "90 0 90" height = "5"></a-cylinder>
+      <a-cone position = "-9 1 0" color = "orange" rotation = "90 0 90"></a-cylinder>
+      </a-box>
+      <!-- Wheels -->
+      <a-box wireframe = "true" position = "2.5 0 2">
+      <a-torus position="0 1 0" color="black" radius="0.75"></a-torus>
+      <a-sphere position="0 1 0" radius="0.55" color="orange"></a-sphere>
+      <a-cylinder position="0 1 0" radius="0.25" color="black" rotation="90 0 0"></a-cylinder>
+      <a-cylinder position="0 1 0" radius="0.15" color="black" rotation="90 0 0" height="1.1"></a-cylinder>
+      </a-box>
+      <a-box wireframe = "true" position = "2.5 0 -2">
+      <a-torus position="0 1 0" color="black" radius="0.75"></a-torus>
+      <a-sphere position="0 1 0" radius="0.55" color="orange"></a-sphere>
+      <a-cylinder position="0 1 0" radius="0.25" color="black" rotation="90 0 0"></a-cylinder>
+      <a-cylinder position="0 1 0" radius="0.15" color="black" rotation="90 0 0" height="1.1"></a-cylinder>
+      </a-box>
+      <a-box wireframe = "true" position = "-2.5 0 -2">
+      <a-torus position="0 1 0" color="black" radius="0.75"></a-torus>
+      <a-sphere position="0 1 0" radius="0.55" color="orange"></a-sphere>
+      <a-cylinder position="0 1 0" radius="0.25" color="black" rotation="90 0 0"></a-cylinder>
+      <a-cylinder position="0 1 0" radius="0.15" color="black" rotation="90 0 0" height="1.1"></a-cylinder>
+      </a-box>
+      <a-box wireframe = "true" position = "-2.5 0 2">
+      <a-torus position="0 1 0" color="black" radius="0.75"></a-torus>
+      <a-sphere position="0 1 0" radius="0.55" color="orange"></a-sphere>
+      <a-cylinder position="0 1 0" radius="0.25" color="black" rotation="90 0 0"></a-cylinder>
+      <a-cylinder position="0 1 0" radius="0.15" color="black" rotation="90 0 0" height="1.1"></a-cylinder>
+      </a-box>
+      <!-- Head lights -->
+      <a-box wireframe = "true" position = "3 2 1">
+      <a-cylinder position="0 0 0" radius="0.1" height="2" color="orange"></a-cylinder>
+      <a-sphere position="0 1 0" radius="0.2" color="yellow"></a-sphere>
+      </a-box>
+      <a-box wireframe = "true" position = "3 2 -1">
+      <a-cylinder position="0 0 0" radius="0.1" height="2" color="orange"></a-cylinder>
+      <a-sphere position="0 1 0" radius="0.2" color="yellow"></a-sphere>
+      </a-box>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20"  src="images.jpg" repeat = "10 10"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.4 5"></a-camera>
+      <a-camera position="0 4 5"></a-camera>
     </a-scene>
   </body>
 </html>
