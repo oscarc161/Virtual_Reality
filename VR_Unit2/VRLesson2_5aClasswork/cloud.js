@@ -1,6 +1,7 @@
 class Cloud{
   constructor(x,y,z){
     // Challenge 1: Create animation variables  x and dx for the Cloud to fly.  Set them to appropriate values.
+    
     this.obj = document.createElement("a-entity");
     let shapes = ["a-dodecahedron","a-icosahedron","a-octahedron","a-tetrahedron"];
 
