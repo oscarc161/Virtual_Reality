@@ -11,18 +11,27 @@
 */
 
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "x-xxxxxxxxxxxxxxxxxxxx",
+  "x-xxxxxxxxxxxxxx-----x",
+  "x-x------------x-----x",
+  "x-xxxxxxxxxxxx-xxxxx-x",
+  "x------------------x-x",
+  "x-xxxxxxxxxxxxxxxx-x-x",
+  "x-x-----gg-------x-x-x",
+  "x-x--------------x-x-x",
+  "x-x--------------x-x-x",
+  "x-x----xxxxxxxxxxx-x-x",
+  "x-x------------------x",
+  "x-x----xxxxxxxxxxx-x-x",
+  "x-x--------------x-x-x",
+  "x-xxxxx----------x-x-x",
+  "x-----x----------x-x-x",
+  "x-x-x-x----------x-x-x",
+  "x-x-x-x----------x-x-x",
+  "x-x-x-x----------x-x-x",
+  "x-x-xgx----gg----x-x-x",
+  "xxxxxxxxxxxxxxxxxx-xxx",
+  "------------------g---",
 ];
 
 /* Challenge 2
@@ -34,13 +43,16 @@ let scene;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   for(let r = 0; r < maze.length; r++){
-    /* Challenge 3
-      Choose a technique to traverse the each character in the string.
-    */ 
-    /* Challenge 4
-       Make an appropriate decision based on the characters you chose to enter 
-       in the maze.  Create an instance of the corresponding object.
-    */
+    let row = maze[r];
+    let cols = row.split("");
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "x"){
+        new Block(c*2,1,r*2)
+      }else if(cols[c] == "g"){
+        new Goblin(c*2,1,r*2)
+      }
+    }
+
   }
 
 })
